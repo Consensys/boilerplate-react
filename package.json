@@ -1,0 +1,64 @@
+{
+	"name": "boilerplate-react",
+	"version": "0.0.1-dev",
+	"description": "React boilerplate",
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com:ConsenSys/boilerplate-react.git"
+	},
+	"keywords": [
+		"react",
+		"boilerplate",
+		"consensys"
+	],
+	"author": "ConsenSys France",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/ConsenSys/boilerplate-react/issues"
+	},
+	"dependencies": {
+		"@material-ui/core": "^3.0.0",
+		"@material-ui/icons": "^3.0.0",
+		"connected-react-router": "^4.5.0",
+		"history": "^4.7.2",
+		"react": "^16.5.0",
+		"react-dom": "^16.5.0",
+		"react-redux": "^5.0.0",
+		"react-router": "^4.0.0",
+		"react-scripts": "1.1.5",
+		"redux": "^4.0.0"
+	},
+	"devDependencies": {
+		"enzyme": "^3.3.0",
+		"enzyme-adapter-react-16": "^1.1.1",
+		"enzyme-to-json": "^3.3.0",
+		"husky": "^0.14.3",
+		"lint-staged": "^6.0.0",
+		"prettier": "^1.10.2",
+		"redux-test-utils": "^0.2.2"
+	},
+	"lint-staged": {
+		"src/**/*.{js,jsx,json,css}": [
+			"prettier --write",
+			"git add"
+		]
+	},
+	"scripts": {
+		"precommit": "lint-staged",
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test --env=jsdom",
+		"eject": "react-scripts eject"
+	},
+	"jest": {
+		"collectCoverageFrom": [
+			"src/**/*.{js,jsx}",
+			"!**/src/index.js",
+			"!**/src/registerServiceWorker.js"
+		]
+	},
+	"prettier": {
+		"useTabs": false,
+		"tabWidth": 4
+	}
+}
