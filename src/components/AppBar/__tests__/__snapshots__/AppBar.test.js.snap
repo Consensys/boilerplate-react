@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AppBar /> when shifted=false matches snapshot 1`] = `
+<AppBar
+  className="AppBar-appBar-1"
+  classes={
+    Object {
+      "colorDefault": "MuiAppBar-colorDefault-9",
+      "colorPrimary": "MuiAppBar-colorPrimary-10",
+      "colorSecondary": "MuiAppBar-colorSecondary-11",
+      "positionAbsolute": "MuiAppBar-positionAbsolute-5",
+      "positionFixed": "MuiAppBar-positionFixed-4",
+      "positionRelative": "MuiAppBar-positionRelative-8",
+      "positionStatic": "MuiAppBar-positionStatic-7",
+      "positionSticky": "MuiAppBar-positionSticky-6",
+      "root": "MuiAppBar-root-3",
+    }
+  }
+  color="primary"
+  position="absolute"
+>
+  <WithTheme(WithWidth(AppBarToolbar)) />
+</AppBar>
+`;
+
+exports[`<AppBar /> when shifted=true matches snapshot 1`] = `
+<AppBar
+  className="AppBar-appBar-1 AppBar-appBarShifted-2"
+  classes={
+    Object {
+      "colorDefault": "MuiAppBar-colorDefault-9",
+      "colorPrimary": "MuiAppBar-colorPrimary-10",
+      "colorSecondary": "MuiAppBar-colorSecondary-11",
+      "positionAbsolute": "MuiAppBar-positionAbsolute-5",
+      "positionFixed": "MuiAppBar-positionFixed-4",
+      "positionRelative": "MuiAppBar-positionRelative-8",
+      "positionStatic": "MuiAppBar-positionStatic-7",
+      "positionSticky": "MuiAppBar-positionSticky-6",
+      "root": "MuiAppBar-root-3",
+    }
+  }
+  color="primary"
+  position="absolute"
+>
+  <WithTheme(WithWidth(AppBarToolbar))
+    shifted={true}
+  />
+</AppBar>
+`;

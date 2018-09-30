@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListItem1 /> when selected=false matches snapshot 1`] = `
+<WithStyles(ListItem)
+  button={true}
+  onClick={[Function]}
+>
+  <WithStyles(ListItemIcon)>
+    <pure(HomeIcon) />
+  </WithStyles(ListItemIcon)>
+  <WithStyles(ListItemText)
+    primary="Test-Text"
+  />
+</WithStyles(ListItem)>
+`;
+
+exports[`<ListItem1 /> when selected=true matches snapshot 1`] = `
+<WithStyles(ListItem)
+  button={true}
+  onClick={[Function]}
+>
+  <WithStyles(ListItemIcon)
+    className="ListItem1-iconSelected-4"
+  >
+    <pure(HomeIcon) />
+  </WithStyles(ListItemIcon)>
+  <WithStyles(ListItemText)
+    primary="Test-Text"
+  />
+</WithStyles(ListItem)>
+`;

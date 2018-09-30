@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> matches snapshot 1`] = `
+<div
+  className="Home-home-1"
+>
+  <div
+    className="Home-homeHeader-3"
+  >
+    <img
+      alt="logo"
+      className="Home-homeLogo-2"
+      src="logo.svg"
+    />
+    <h1
+      className="Home-homeTitle-4"
+    >
+      Welcome to ConsenSys React Boilerplate
+    </h1>
+  </div>
+  <p
+    className="Home-homeIntro-5"
+  >
+    To get started, edit 
+    <code>
+      src/App.js
+    </code>
+     and save to reload.
+  </p>
+</div>
+`;

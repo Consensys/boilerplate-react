@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NoWhere /> matches snapshot 1`] = `
+<div
+  className="NoWhere-nowhere-1"
+>
+  <div
+    className="NoWhere-nowhereHeader-2"
+  >
+    <pure(ReportIcon)
+      className="NoWhere-nowhereIcon-4"
+    />
+    <h1
+      className="NoWhere-nowhereTitle-3"
+    >
+      Oups... It seems that you are lost!
+    </h1>
+  </div>
+  <Connect(WithStyles(NoWhereHomeButton)) />
+</div>
+`;

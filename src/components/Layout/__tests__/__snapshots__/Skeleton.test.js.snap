@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LayoutSkeleton /> matches snapshot 1`] = `
+<div
+  className="LayoutSkeleton-frame-1"
+>
+  <Connect(WithStyles(AppBar)) />
+  <Connect(WithTheme(WithWidth(WithStyles(Sidebar)))) />
+  <div
+    className="LayoutSkeleton-content-2"
+  >
+    <LayoutContent />
+  </div>
+</div>
+`;

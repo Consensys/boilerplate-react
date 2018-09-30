@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BackHomeButton /> matches snapshot 1`] = `
+<WithStyles(Button)
+  className="NoWhereHomeButton-button-1"
+  color="#9e9e9e"
+  onClick={[Function]}
+  raised={true}
+>
+  Bring me back home!
+</WithStyles(Button)>
+`;

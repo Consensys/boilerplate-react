@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SidebarHeader /> matches snapshot 1`] = `
+<div
+  className="SidebarHeader-drawerHeader-1"
+>
+  <WithStyles(IconButton)
+    onClick={[Function]}
+  >
+    <pure(ChevronLeftIcon) />
+  </WithStyles(IconButton)>
+</div>
+`;

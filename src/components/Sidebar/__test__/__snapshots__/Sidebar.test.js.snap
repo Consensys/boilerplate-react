@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Sidebar /> when width is smDown matches snapshot 1`] = `
+<WithStyles(Drawer)
+  classes={Object {}}
+  onClose={[Function]}
+>
+  <div
+    className="Sidebar-drawerInner-4"
+  >
+    <Connect(WithStyles(SidebarHeader)) />
+    <WithStyles(List)>
+      <Connect(HomeItem) />
+    </WithStyles(List)>
+  </div>
+</WithStyles(Drawer)>
+`;
+
+exports[`<Sidebar /> when width is smUp matches snapshot 1`] = `
+<WithStyles(Drawer)
+  classes={
+    Object {
+      "docked": "Sidebar-drawer-1",
+      "paper": "Sidebar-drawerPaper-2 Sidebar-drawerPaperClose-3",
+    }
+  }
+  onClose={[Function]}
+  variant="permanent"
+>
+  <div
+    className="Sidebar-drawerInner-4"
+  >
+    <Connect(WithStyles(SidebarHeader)) />
+    <WithStyles(List)>
+      <Connect(HomeItem) />
+    </WithStyles(List)>
+  </div>
+</WithStyles(Drawer)>
+`;

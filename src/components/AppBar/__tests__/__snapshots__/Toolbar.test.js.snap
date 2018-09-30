@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AppBarToolbar /> when shifted=false and width is smDown matches snapshot 1`] = `
+<Toolbar
+  classes={
+    Object {
+      "dense": "MuiToolbar-dense-4",
+      "gutters": "MuiToolbar-gutters-2",
+      "regular": "MuiToolbar-regular-3",
+      "root": "MuiToolbar-root-1",
+    }
+  }
+  disableGutters={true}
+  variant="regular"
+>
+  <Connect(WithStyles(AppbarButton)) />
+  <Connect(AppBarTitle) />
+</Toolbar>
+`;
+
+exports[`<AppBarToolbar /> when shifted=true and width is smDown matches snapshot 1`] = `
+<Toolbar
+  classes={
+    Object {
+      "dense": "MuiToolbar-dense-4",
+      "gutters": "MuiToolbar-gutters-2",
+      "regular": "MuiToolbar-regular-3",
+      "root": "MuiToolbar-root-1",
+    }
+  }
+  disableGutters={false}
+  variant="regular"
+>
+  <Connect(WithStyles(AppbarButton)) />
+  <Connect(AppBarTitle) />
+</Toolbar>
+`;
+
+exports[`<AppBarToolbar /> when shifted=true andd width is mdUp matches snapshot 1`] = `
+<Toolbar
+  classes={
+    Object {
+      "dense": "MuiToolbar-dense-4",
+      "gutters": "MuiToolbar-gutters-2",
+      "regular": "MuiToolbar-regular-3",
+      "root": "MuiToolbar-root-1",
+    }
+  }
+  disableGutters={true}
+  variant="regular"
+>
+  <Connect(WithStyles(AppbarButton)) />
+  <Connect(AppBarTitle) />
+</Toolbar>
+`;

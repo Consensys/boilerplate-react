@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SidebarHomeItem /> when location does not match matches snapshot 1`] = `
+<HomeItem
+  push={[Function]}
+  selected={false}
+/>
+`;
+
+exports[`<SidebarHomeItem /> when location match matches snapshot 1`] = `
+<HomeItem
+  push={[Function]}
+  selected={true}
+/>
+`;

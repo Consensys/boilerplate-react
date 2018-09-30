@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AppBarTitle /> matches snapshot 1`] = `
+<WithStyles(ButtonBase)
+  onClick={[Function]}
+>
+  <WithStyles(Typography)
+    color="inherit"
+    noWrap={true}
+    variant="title"
+  >
+    ConsenSys React Boilerplate
+  </WithStyles(Typography)>
+</WithStyles(ButtonBase)>
+`;
