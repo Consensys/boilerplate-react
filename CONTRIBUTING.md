@@ -31,13 +31,13 @@
 
 ```
 .
+├── nginx/                 # Nginx server configuration for production
 ├── public/                # Static files
-├── server/                # Express server only used for production
 ├── src/                   # Single page application source script
 ├── .dockerignore          # .dockerignore
 ├── .eslintrc              # Eslint configuration
 ├── .gitignore             # .gitignore
-├── .gitlab-ci.yml         # CI/CD script
+├── .travis.yml         # CI/CD script
 ├── CONTRIBUTING.md        # Contributing guidelines
 ├── docker-compose.yml     # Docker compose script to set dev environment
 ├── Dockerfile             # Docker file
