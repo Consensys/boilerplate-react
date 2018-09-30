@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sidebarReducer On CLOSE_SIDEBAR state matches snapshot 1`] = `
+Object {
+  "open": false,
+}
+`;
+
+exports[`sidebarReducer On OPEN_SIDEBAR state matches snapshot 1`] = `
+Object {
+  "open": true,
+}
+`;
+
+exports[`sidebarReducer On default state matches snapshot 1`] = `
+Object {
+  "open": false,
+}
+`;
+
+exports[`sidebarReducer default state match 1`] = `
+Object {
+  "open": false,
+}
+`;
