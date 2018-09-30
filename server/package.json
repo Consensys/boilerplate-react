@@ -1,0 +1,19 @@
+{
+    "name": "react-app-server",
+    "version": "1.0.0",
+    "description": "Express serving a react-app bundle",
+    "scripts": {
+      "start": "node src/index.js"
+    },
+    "dependencies": {
+        "classnames": "^2.2.5",
+		"compression": "^1.7.1",
+		"express": "^4.16.2",
+        "helmet": "^3.9.0",
+        "morgan": "^1.9.0",
+        "path": "^0.12.7"
+    },
+    "devDependencies": {
+      "nodemon": "^1.14.7"
+    }
+}
