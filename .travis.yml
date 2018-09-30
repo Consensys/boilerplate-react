@@ -1,0 +1,21 @@
+stages:
+  - test
+
+sudo: false
+os: linux
+
+language: node_js
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
+install:
+  - yarn install
+
+jobs:
+  include:
+    - stage: test
+      script: yarn test -- --coverage
+      after_script: bash <(curl -s https://codecov.io/bash)
