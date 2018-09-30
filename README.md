@@ -1,7 +1,7 @@
-[![Build Status](https://img.shields.io/travis/ConsenSys/boilerplate-react)](https://travis-ci.org/ConsenSys/boilerplate-react)
+[![Build Status](https://img.shields.io/travis/ConsenSys/boilerplate-react.svg)](https://travis-ci.org/ConsenSys/boilerplate-react)
 [![Coverage Status](https://img.shields.io/codecov/c/github/ConsenSys/boilerplate-react/master.svg)](https://codecov.io/gh/ConsenSys/boilerplate-react/branch/master)
 ![Code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
-[![Dependencies](https://img.shields.io/david/ConsenSys/boilerplate-react)](https://david-dm.org/ConsenSys/boilerplate-react?path=packages/material-ui)
+[![Dependencies](https://img.shields.io/david/ConsenSys/boilerplate-react.svg)](https://david-dm.org/ConsenSys/boilerplate-react)
 [![DevDependencies](https://img.shields.io/david/dev/ConsenSys/boilerplate-react.svg)](https://david-dm.org/ConsenSys/boilerplate-react?type=dev)
 
 # Boilerplate-React
