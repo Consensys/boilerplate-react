@@ -1,0 +1,18 @@
+# Source code
+.git
+.gitignore
+.dockerignore
+Dockerfile*
+docker-compose*
+.gitlab-ci.yml
+STARTING.nd
+
+# Dependency directory
+node_modules
+
+# Logs
+logs
+*.log
+
+# Coverage directory used by tools like istanbul
+coverage
