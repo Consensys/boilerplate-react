@@ -3,6 +3,7 @@
 ![Code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
 [![Dependencies](https://img.shields.io/david/ConsenSys/boilerplate-react.svg)](https://david-dm.org/ConsenSys/boilerplate-react)
 [![DevDependencies](https://img.shields.io/david/dev/ConsenSys/boilerplate-react.svg)](https://david-dm.org/ConsenSys/boilerplate-react?type=dev)
+[![Demo on Heroku](https://img.shields.io/badge/demo-heroku-brightgreen.svg?style=flat-square)](https://consensys-boilerplate-react.herokuapp.com)
 
 # Boilerplate-React
 
