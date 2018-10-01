@@ -1,7 +1,10 @@
 # Versions
 
+## 0.2.0
+###### *Unreleased*
+
 ## 0.1.0
-###### October 1st 2018
+###### *October 1st 2018*
 
 ### Features
 
