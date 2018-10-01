@@ -1,7 +1,7 @@
 # Versions
 
 ## 0.1.0
-###### *Unreleased*
+###### October 1st 2018
 
 ### Features
 
@@ -27,7 +27,6 @@
 #### Utils
 
 - [registerServiceWorker] Implement service worker for progressive Web App
-- [getRuntimeEn] Define Materia-Ui theme
 
 #### Test-Utils
 
@@ -38,15 +37,16 @@
 - [routes] Define routes
 - [theme] Define Material-Ui theme
 
-
 ### Chore
 
 - [Dockerfile] Add production docker configuration with multi-stage build
+- [nginx] Production docker image use nginx server
 - [docker-compose.yml] Implement dev environment script
-- [.gitlab-ci.yml] CI/CD script
+- [.travis.yml] CI/CD script
 - [.eslintrc] Linting configuration file
 
 ### Doc
 
 - [CONTRIBUTING.md] Add contributing guidelines
-- [CHANGES.md] Implement changelog
+- [CHANGES.md] Add changelog
+- [README.md] Add readme with badges
