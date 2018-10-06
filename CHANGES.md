@@ -1,7 +1,13 @@
 # Versions
 
-## 0.2.0
-###### *Unreleased*
+## 0.1.1
+###### *October 6th 2018*
+
+### Chore
+
+- [package.json] Update dependencies
+- [Dockerfile] Update node version to 10
+- [.gitlab-ci.yml] CI/CD script
 
 ## 0.1.0
 ###### *October 1st 2018*
