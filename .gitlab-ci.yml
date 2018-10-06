@@ -10,7 +10,7 @@ services:
 
 test:
   stage: test
-  image: node:8.9-alpine
+  image: node:10-alpine
   script:
     - yarn install
     - CI=true yarn test -- --coverage
