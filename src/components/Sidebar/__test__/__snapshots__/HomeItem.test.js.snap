@@ -3,7 +3,7 @@
 exports[`<SidebarHomeItem /> matches snapshot 1`] = `
 <WithStyles(ListItem1)
   icon={<pure(HomeIcon) />}
-  onClick={[Function]}
+  onClick={[MockFunction]}
   text="Home"
 />
 `;

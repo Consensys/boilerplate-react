@@ -2,7 +2,7 @@
 
 exports[`<AppBarTitle /> matches snapshot 1`] = `
 <WithStyles(ButtonBase)
-  onClick={[Function]}
+  onClick={[MockFunction]}
 >
   <WithStyles(Typography)
     color="inherit"

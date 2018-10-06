@@ -4,7 +4,7 @@ exports[`<BackHomeButton /> matches snapshot 1`] = `
 <WithStyles(Button)
   className="NoWhereHomeButton-button-1"
   color="#9e9e9e"
-  onClick={[Function]}
+  onClick={[MockFunction]}
   raised={true}
 >
   Bring me back home!
