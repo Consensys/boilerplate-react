@@ -1,0 +1,72 @@
+variables:
+  NAME: web
+
+stages:
+- test
+- build
+
+services:
+  - docker:dind
+
+test:
+  stage: test
+  image: node:8.9-alpine
+  script:
+    - yarn install
+    - CI=true yarn test -- --coverage
+  coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
+  only:
+    refs:
+      - branches
+      - tags
+
+build-on-branch:
+  image: docker:stable
+  stage: build
+  before_script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+  script:
+    # Build image following http://label-schema.org/rc1/ label convention convention
+    - docker build --label org.label-schema.schema-version="1.0.0-rc1" --label org.label-schema.build-date=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --label org.label-schema.name="${NAME}" --label org.label-schema.version="dirty" --label org.label-schema.vcs-url="${CI_PROJECT_URL}" --label org.label-schema.vcs-ref="${CI_COMMIT_SHA:0:8}" --label org.label-schema.vendor="ConsenSys France" -t ${CI_REGISTRY_IMAGE}/${CI_COMMIT_REF_NAME}:${CI_COMMIT_SHA:0:8} -t ${CI_REGISTRY_IMAGE}/${CI_COMMIT_REF_NAME}:latest .
+    # Push image
+    - docker push ${CI_REGISTRY_IMAGE}/${CI_COMMIT_REF_NAME}:${CI_COMMIT_SHA:0:8} 
+    - docker push ${CI_REGISTRY_IMAGE}/${CI_COMMIT_REF_NAME}:latest
+  after_script:
+    - docker logout
+  only:
+    -  /^feature/[a-zA-Z0-9/-]*$/
+    - /^fix/[a-zA-Z0-9/-]*$/
+
+build-on-master:
+  image: docker:stable
+  stage: build
+  before_script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+  script:
+    # Build image following http://label-schema.org/rc1/ label convention convention
+    - docker build --label org.label-schema.schema-version="1.0.0-rc1" --label org.label-schema.build-date=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --label org.label-schema.name="${NAME}" --label org.label-schema.version="dirty" --label org.label-schema.vcs-url="${CI_PROJECT_URL}" --label org.label-schema.vcs-ref="${CI_COMMIT_SHA:0:8}" --label org.label-schema.vendor="ConsenSys France" -t ${CI_REGISTRY_IMAGE}/${CI_COMMIT_REF_NAME}:${CI_COMMIT_SHA:0:8} -t ${CI_REGISTRY_IMAGE}/master:latest -t ${CI_REGISTRY_IMAGE}:latest .
+    # Push image
+    - docker push ${CI_REGISTRY_IMAGE}/master:${CI_COMMIT_SHA:0:8} 
+    - docker push ${CI_REGISTRY_IMAGE}/master:latest 
+    - docker push ${CI_REGISTRY_IMAGE}:latest
+  after_script:
+    - docker logout
+  only:
+    - master
+
+build-on-tag:
+  image: docker:stable
+  stage: build
+  before_script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+  script:
+    # Build image following http://label-schema.org/rc1/ label convention convention
+    - docker build --label org.label-schema.schema-version="1.0.0-rc1" --label org.label-schema.build-date=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --label org.label-schema.name="${NAME}" --label org.label-schema.version="${CI_COMMIT_TAG}" --label org.label-schema.vcs-url="${CI_PROJECT_URL}" --label org.label-schema.vcs-ref="${CI_COMMIT_SHA:0:8}" --label org.label-schema.vendor="ConsenSys France" -t ${CI_REGISTRY_IMAGE}:${CI_COMMIT_TAG} .
+    # Push image
+    - docker push ${CI_REGISTRY_IMAGE}:${CI_COMMIT_TAG}
+  after_script:
+    - docker logout
+  only:
+    refs:
+      - tags
+    
