@@ -3,7 +3,7 @@
 exports[`<ListItem1 /> when selected=false matches snapshot 1`] = `
 <WithStyles(ListItem)
   button={true}
-  onClick={[Function]}
+  onClick={[MockFunction]}
 >
   <WithStyles(ListItemIcon)>
     <pure(HomeIcon) />
@@ -17,7 +17,7 @@ exports[`<ListItem1 /> when selected=false matches snapshot 1`] = `
 exports[`<ListItem1 /> when selected=true matches snapshot 1`] = `
 <WithStyles(ListItem)
   button={true}
-  onClick={[Function]}
+  onClick={[MockFunction]}
 >
   <WithStyles(ListItemIcon)
     className="ListItem1-iconSelected-4"

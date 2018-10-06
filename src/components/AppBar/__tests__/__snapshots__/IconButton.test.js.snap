@@ -5,7 +5,7 @@ exports[`<AppBarIconButton /> when shifted=false matches snapshot 1`] = `
   aria-label="open drawer"
   className="AppbarButton-menuButton-1"
   color="inherit"
-  onClick={[Function]}
+  onClick={[MockFunction]}
 >
   <pure(MenuIcon) />
 </WithStyles(IconButton)>
@@ -16,7 +16,7 @@ exports[`<AppBarIconButton /> when shifted=true matches snapshot 1`] = `
   aria-label="open drawer"
   className="AppbarButton-menuButton-1 AppbarButton-hide-2"
   color="inherit"
-  onClick={[Function]}
+  onClick={[MockFunction]}
 >
   <pure(MenuIcon) />
 </WithStyles(IconButton)>

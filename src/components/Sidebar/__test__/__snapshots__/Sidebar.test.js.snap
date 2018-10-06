@@ -3,7 +3,7 @@
 exports[`<Sidebar /> when width is smDown matches snapshot 1`] = `
 <WithStyles(Drawer)
   classes={Object {}}
-  onClose={[Function]}
+  onClose={[MockFunction]}
 >
   <div
     className="Sidebar-drawerInner-4"
@@ -24,7 +24,7 @@ exports[`<Sidebar /> when width is smUp matches snapshot 1`] = `
       "paper": "Sidebar-drawerPaper-2 Sidebar-drawerPaperClose-3",
     }
   }
-  onClose={[Function]}
+  onClose={[MockFunction]}
   variant="permanent"
 >
   <div

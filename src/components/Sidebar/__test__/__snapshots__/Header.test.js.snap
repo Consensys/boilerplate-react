@@ -5,7 +5,7 @@ exports[`<SidebarHeader /> matches snapshot 1`] = `
   className="SidebarHeader-drawerHeader-1"
 >
   <WithStyles(IconButton)
-    onClick={[Function]}
+    onClick={[MockFunction]}
   >
     <pure(ChevronLeftIcon) />
   </WithStyles(IconButton)>
