@@ -1,4 +1,4 @@
-FROM node:9-alpine as builder
+FROM node:10-alpine as builder
 
 # Set NODE_ENV to production
 ENV NODE_ENV production
