@@ -4,6 +4,7 @@ variables:
 stages:
 - test
 - build
+- deploy
 
 services:
   - docker:dind
@@ -69,4 +70,18 @@ build-on-tag:
   only:
     refs:
       - tags
-    
+
+deploy-per-branch:
+  stage: deploy
+  script:
+    - |-
+      curl -X POST -f token=${TRIGGER_TOKEN} -f ref=${TRIGGER_REMOTE_REF} \
+      -f "variables[TRIGGER_REGISTRY]=${CI_REGISTRY}" \
+      -f "variables[TRIGGER_IMAGE_REPOSITORY]=${CI_REGISTRY_IMAGE}/${CI_COMMIT_REF_NAME}" \
+      -f "variables[TRIGGER_IMAGE_TAG]=${CI_COMMIT_SHA:0:8}" \
+      -f "variables[TRIGGER_REF_NAME]=${CI_COMMIT_REF_NAME}" \
+      -f "variables[TRIGGER_REF_SLUG]=${CI_COMMIT_REF_SLUG}" \
+      https://gitlab.com/api/v4/projects/${TRIGGER_PROJECT}/trigger/pipeline
+  only:
+    -  /^feature/[a-zA-Z0-9/-]*$/
+    - /^fix/[a-zA-Z0-9/-]*$/
