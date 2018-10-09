@@ -75,7 +75,7 @@ deploy-per-branch:
   stage: deploy
   script:
     - |-
-      curl -sSvL -X POST --form token=${TRIGGER_TOKEN} --form ref=${TRIGGER_REMOTE_REF} \
+      curl -sSvL -X POST --form token=${CI_JOB_TOKEN} --form ref=${TRIGGER_REMOTE_REF} \
       --form "variables[TRIGGER_REGISTRY]=${CI_REGISTRY}" \
       --form "variables[TRIGGER_IMAGE_REPOSITORY]=${CI_REGISTRY_IMAGE}/${CI_COMMIT_REF_NAME}" \
       --form "variables[TRIGGER_IMAGE_TAG]=${CI_COMMIT_SHA:0:8}" \
