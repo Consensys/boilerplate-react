@@ -1,7 +1,7 @@
 import { routerMiddleware } from "connected-react-router";
-import createHistory from "history/createBrowserHistory";
+import { createBrowserHistory } from "history";
 
-// Configure react-router-redux
-export const history = createHistory();
+// Configure connected-react-router
+export const history = createBrowserHistory();
 
 export default routerMiddleware(history);
