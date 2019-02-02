@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jokesReducer On END_FETCHING_JOKE state matches snapshot 1`] = `
+Object {
+  "isLoading": false,
+}
+`;
+
+exports[`jokesReducer On START_FETCHING_JOKE state matches snapshot 1`] = `
+Object {
+  "isLoading": true,
+}
+`;
+
+exports[`jokesReducer On default state matches snapshot 1`] = `
+Object {
+  "isLoading": false,
+}
+`;
+
+exports[`jokesReducer default state match 1`] = `
+Object {
+  "isLoading": false,
+}
+`;

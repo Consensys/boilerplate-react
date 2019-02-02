@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jokesReducer On SET_JOKE state matches snapshot 1`] = `
+Object {
+  "currentJoke": "TEST_SET_JOKE",
+}
+`;
+
+exports[`jokesReducer On default state matches snapshot 1`] = `
+Object {
+  "currentJoke": "",
+}
+`;
+
+exports[`jokesReducer default state match 1`] = `
+Object {
+  "currentJoke": "",
+}
+`;
