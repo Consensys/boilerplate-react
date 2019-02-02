@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import JokeDashboard from "../../containers/JokeDashboard/JokeDashboard";
+
 import { withStyles } from "@material-ui/core/styles";
 
 import logo from "./logo.svg";
@@ -35,6 +37,7 @@ const Home = ({ classes }) => (
         <p className={classes.homeIntro}>
             To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <JokeDashboard />
     </div>
 );
 
