@@ -6,7 +6,7 @@ import Typography from "@material-ui/core/Typography";
 
 const AppBarTitle = ({ onClick }) => (
     <ButtonBase onClick={onClick}>
-        <Typography variant="title" color="inherit" noWrap>
+        <Typography variant="h6" color="inherit" noWrap={true}>
             ConsenSys React Boilerplate
         </Typography>
     </ButtonBase>

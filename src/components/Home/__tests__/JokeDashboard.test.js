@@ -12,7 +12,9 @@ describe("<Home />", () => {
         shallow = createShallow({ dive: 1 });
     });
     beforeEach(() => {
-        wrapper = shallow(<JokeDashboard />);
+        wrapper = shallow(
+            <JokeDashboard currentJoke={""} fetchJoke={() => {}} />
+        );
     });
 
     it("matches snapshot", () => {

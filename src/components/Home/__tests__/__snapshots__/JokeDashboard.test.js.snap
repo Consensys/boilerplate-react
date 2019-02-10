@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> matches snapshot 1`] = `
+<div
+  className="JokeDashboard-root-1"
+>
+  <WithStyles(Button)
+    color="primary"
+    onClick={[Function]}
+    variant="raised"
+  >
+    Give me a new joke
+  </WithStyles(Button)>
+</div>
+`;

@@ -49,7 +49,10 @@ describe("<Sidebar />", () => {
             wrapper = shallow(
                 <MuiThemeProvider
                     theme={createMuiTheme({
-                        breakpoints: { values: { sm: 600 } }
+                        breakpoints: { values: { sm: 600 } },
+                        typography: {
+                            useNextVariants: true
+                        }
                     })}
                 >
                     <Sidebar {...props} />
@@ -84,7 +87,10 @@ describe("<Sidebar />", () => {
             wrapper = shallow(
                 <MuiThemeProvider
                     theme={createMuiTheme({
-                        breakpoints: { vaues: { sm: 600 } }
+                        breakpoints: { vaues: { sm: 600 } },
+                        typography: {
+                            useNextVariants: true
+                        }
                     })}
                 >
                     <Sidebar {...props} />

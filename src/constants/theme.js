@@ -11,6 +11,9 @@ const theme = createMuiTheme({
             A400: "#00e677"
         },
         error: red
+    },
+    typography: {
+        useNextVariants: true
     }
 });
 

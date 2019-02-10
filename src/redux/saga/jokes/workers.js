@@ -1,5 +1,4 @@
 import { put, call } from "redux-saga/effects";
-
 // Actions
 import {
     startFetchingJoke,
@@ -7,7 +6,6 @@ import {
     setJoke
 } from "../../actions/jokes";
 import { addError } from "../../actions/errors";
-
 // Utils
 import { fetchRandomJoke } from "./utils";
 

@@ -27,5 +27,6 @@ exports[`<Home /> matches snapshot 1`] = `
     </code>
      and save to reload.
   </p>
+  <Connect(WithStyles(JokeDashboard)) />
 </div>
 `;

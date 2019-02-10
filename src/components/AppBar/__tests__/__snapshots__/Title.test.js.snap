@@ -7,7 +7,7 @@ exports[`<AppBarTitle /> matches snapshot 1`] = `
   <WithStyles(Typography)
     color="inherit"
     noWrap={true}
-    variant="title"
+    variant="h6"
   >
     ConsenSys React Boilerplate
   </WithStyles(Typography)>

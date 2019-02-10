@@ -20,7 +20,10 @@ describe("<AppBarToolbar />", () => {
             wrapper = shallow(
                 <MuiThemeProvider
                     theme={createMuiTheme({
-                        breakpoints: { values: { md: 960 } }
+                        breakpoints: { values: { md: 960 } },
+                        typography: {
+                            useNextVariants: true
+                        }
                     })}
                 >
                     <AppBarToolbar shifted />
@@ -43,7 +46,10 @@ describe("<AppBarToolbar />", () => {
             wrapper = shallow(
                 <MuiThemeProvider
                     theme={createMuiTheme({
-                        breakpoints: { values: { md: 960 } }
+                        breakpoints: { values: { md: 960 } },
+                        typography: {
+                            useNextVariants: true
+                        }
                     })}
                 >
                     <AppBarToolbar shifted />
@@ -66,7 +72,10 @@ describe("<AppBarToolbar />", () => {
             wrapper = shallow(
                 <MuiThemeProvider
                     theme={createMuiTheme({
-                        breakpoints: { values: { md: 960 } }
+                        breakpoints: { values: { md: 960 } },
+                        typography: {
+                            useNextVariants: true
+                        }
                     })}
                 >
                     <AppBarToolbar />
