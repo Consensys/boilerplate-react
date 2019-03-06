@@ -26,8 +26,7 @@
     "react-redux": "^6.0.0",
     "react-router": "^4.3.0",
     "react-scripts": "^2.0.0",
-    "redux": "^4.0.1",
-    "redux-test-utils": "^0.3.0"
+    "redux": "^4.0.1"
   },
   "devDependencies": {
     "enzyme": "^3.7.0",
@@ -35,7 +34,8 @@
     "enzyme-to-json": "^3.3.0",
     "husky": "^1.1.0",
     "lint-staged": "^7.3.0",
-    "prettier": "^1.10.2"
+    "prettier": "^1.10.2",
+    "redux-test-utils": "^0.3.0"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
