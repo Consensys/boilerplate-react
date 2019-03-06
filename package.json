@@ -27,8 +27,7 @@
     "react-router": "^4.3.0",
     "react-scripts": "^2.0.0",
     "redux": "^4.0.1",
-    "redux-saga": "^1.0.1",
-    "redux-test-utils": "^0.3.0"
+    "redux-saga": "^1.0.1"
   },
   "devDependencies": {
     "enzyme": "^3.7.0",
@@ -37,6 +36,7 @@
     "husky": "^1.1.0",
     "lint-staged": "^7.3.0",
     "prettier": "^1.10.2",
+    "redux-test-utils": "^0.3.0",
     "sinon": "^7.2.3"
   },
   "lint-staged": {
