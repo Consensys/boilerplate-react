@@ -1,12 +1,15 @@
-import { matchPath } from "react-router";
+// Libs
 import { connect } from "react-redux";
 import { push } from "connected-react-router";
-
+// Component
 import SidebarHomeItem from "../../components/Sidebar/HomeItem";
+// Constants
 import { HOME } from "../../constants/routes";
+// Selectors
+import { isItemSelected } from "../../redux/selectors/ui";
 
 const mapStateToProps = state => ({
-    selected: !!matchPath(state.router.location.pathname, { path: HOME })
+    selected: isItemSelected(state)
 });
 
 const mapDispatchToProps = {
