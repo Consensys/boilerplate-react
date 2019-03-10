@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import Button from "@material-ui/core/Button";
-import { grey } from "@material-ui/core/colors";
 import { withStyles } from "@material-ui/core/styles";
 
 const styles = theme => ({
@@ -13,8 +12,8 @@ const styles = theme => ({
 
 const NoWhereHomeButton = ({ classes, onClick }) => (
     <Button
-        raised
-        color={grey[500]}
+        variant="raised"
+        color="default"
         className={classes.button}
         onClick={onClick}
     >

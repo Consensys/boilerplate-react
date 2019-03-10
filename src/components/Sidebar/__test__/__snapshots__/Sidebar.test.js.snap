@@ -10,7 +10,7 @@ exports[`<Sidebar /> when width is smDown matches snapshot 1`] = `
   >
     <Connect(WithStyles(SidebarHeader)) />
     <WithStyles(List)>
-      <Connect(HomeItem) />
+      <Connect(SidebarHomeItem) />
     </WithStyles(List)>
   </div>
 </WithStyles(Drawer)>
@@ -32,7 +32,7 @@ exports[`<Sidebar /> when width is smUp matches snapshot 1`] = `
   >
     <Connect(WithStyles(SidebarHeader)) />
     <WithStyles(List)>
-      <Connect(HomeItem) />
+      <Connect(SidebarHomeItem) />
     </WithStyles(List)>
   </div>
 </WithStyles(Drawer)>

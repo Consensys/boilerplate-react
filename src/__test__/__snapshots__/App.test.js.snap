@@ -12,7 +12,7 @@ exports[`<App /> matches snapshot 1`] = `
     }
   }
 >
-  <Connect(ConnectedRouter)
+  <Connect(ConnectedRouterWithContext)
     history={
       Object {
         "action": "POP",
@@ -335,6 +335,6 @@ exports[`<App /> matches snapshot 1`] = `
     >
       <Layout />
     </MuiThemeProvider>
-  </Connect(ConnectedRouter)>
+  </Connect(ConnectedRouterWithContext)>
 </Provider>
 `;

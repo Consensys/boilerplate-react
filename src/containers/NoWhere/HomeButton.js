@@ -1,11 +1,14 @@
 import { connect } from "react-redux";
-import { push } from "react-router-redux";
+import { push } from "connected-react-router";
 
 import NoWhereHomeButton from "../../components/NoWhere/HomeButton";
 import { HOME } from "../../constants/routes";
 
-const mapDispatchToProps = {
-    onClick: () => push(HOME)
-};
+const mapDispatchToProps = dispatch => ({
+    onClick: () => dispatch(push(HOME))
+});
 
-export default connect(undefined, mapDispatchToProps)(NoWhereHomeButton);
+export default connect(
+    undefined,
+    mapDispatchToProps
+)(NoWhereHomeButton);
