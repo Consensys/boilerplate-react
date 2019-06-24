@@ -1,17 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import classNames from "classnames";
-import { compose } from "redux";
-
-import Drawer from "@material-ui/core/Drawer";
-import List from "@material-ui/core/List";
-import withWidth, { isWidthUp } from "@material-ui/core/withWidth";
-import { withStyles } from "@material-ui/core/styles";
-
+import clsx from "clsx";
+// Material Components
+import { Drawer, List } from "@material-ui/core";
+// Containers
 import SidebarHomeItem from "../../containers/Sidebar/HomeItem";
 import SidebarHeader from "../../containers/Sidebar/Header";
+// Styles
+import withWidth, { isWidthUp } from "@material-ui/core/withWidth";
+import { makeStyles } from "@material-ui/core/styles";
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
     drawer: {
         height: "100vh",
         position: "fixed"
@@ -40,9 +39,10 @@ const styles = theme => ({
         // Make the items inside not wrap when transitioning:
         width: 240
     }
-});
+}));
 
-const Sidebar = ({ classes, width, variant, open, onClose }) => {
+const Sidebar = ({ width, variant, open, onClose }) => {
+    const classes = useStyles();
     const isLargeScreen = isWidthUp("sm", width);
     return (
         <Drawer
@@ -51,7 +51,7 @@ const Sidebar = ({ classes, width, variant, open, onClose }) => {
                 isLargeScreen
                     ? {
                           docked: classes.drawer,
-                          paper: classNames(
+                          paper: clsx(
                               classes.drawerPaper,
                               !open && classes.drawerPaperClose
                           )
@@ -72,11 +72,10 @@ const Sidebar = ({ classes, width, variant, open, onClose }) => {
 };
 
 Sidebar.propTypes = {
-    classes: PropTypes.object.isRequired,
     width: PropTypes.oneOf(["xs", "sm", "md", "lg", "xl"]),
     variant: PropTypes.string,
     open: PropTypes.bool,
     onClose: PropTypes.func
 };
 
-export default compose(withWidth(), withStyles(styles))(Sidebar);
+export default withWidth()(Sidebar);

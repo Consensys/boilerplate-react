@@ -1,11 +1,10 @@
 import React from "react";
-import PropTypes from "prop-types";
-
-import { withStyles } from "@material-ui/core/styles";
-
+// Logo
 import logo from "./logo.svg";
+// Styles
+import { makeStyles } from "@material-ui/core/styles";
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
     home: {
         textAlign: "center"
     },
@@ -22,24 +21,23 @@ const styles = theme => ({
     homeIntro: {
         fontSize: "large"
     }
-});
+}));
 
-const Home = ({ classes }) => (
-    <div className={classes.home}>
-        <div className={classes.homeHeader}>
-            <img src={logo} className={classes.homeLogo} alt="logo" />
-            <h1 className={classes.homeTitle}>
-                Welcome to ConsenSys React Boilerplate
-            </h1>
+const Home = () => {
+    const classes = useStyles();
+    return (
+        <div className={classes.home}>
+            <div className={classes.homeHeader}>
+                <img src={logo} className={classes.homeLogo} alt="logo" />
+                <h1 className={classes.homeTitle}>
+                    Welcome to ConsenSys React Boilerplate
+                </h1>
+            </div>
+            <p className={classes.homeIntro}>
+                To get started, edit <code>src/App.js</code> and save to reload.
+            </p>
         </div>
-        <p className={classes.homeIntro}>
-            To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-    </div>
-);
-
-Home.propTypes = {
-    classes: PropTypes.object.isRequired
+    );
 };
 
-export default withStyles(styles)(Home);
+export default Home;

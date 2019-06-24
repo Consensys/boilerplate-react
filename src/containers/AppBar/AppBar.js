@@ -1,9 +1,14 @@
-import { connect } from "react-redux";
-
+import React from "react";
+import { useSelector } from "react-redux";
+// Selector
+import { selectSidebarOpen } from "../../redux/selectors/ui/sidebar";
+// Component
 import AppBar from "../../components/AppBar/AppBar";
 
-const mapStateToProps = state => ({
-    shifted: state.ui.sidebar.open
-});
+const AppBarContainer = () => {
+    const shifted = useSelector(selectSidebarOpen);
 
-export default connect(mapStateToProps)(AppBar);
+    return <AppBar shifted={shifted} />;
+};
+
+export default AppBarContainer;

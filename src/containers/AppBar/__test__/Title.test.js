@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import { createMockStore } from "redux-test-utils";
-import { push } from "react-router-redux";
+import { push } from "connected-react-router";
 
 import AppBarTitle from "../Title";
 import { HOME } from "../../../constants/routes";

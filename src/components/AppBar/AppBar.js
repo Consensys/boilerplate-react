@@ -1,13 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import classNames from "classnames";
-
+import clsx from "clsx";
+// Material Components
 import MuiAppBar from "@material-ui/core/AppBar";
-import { withStyles } from "@material-ui/core/styles";
-
+// Components
 import AppBarToolbar from "./Toolbar";
+// Styles
+import { makeStyles } from "@material-ui/core/styles";
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
     appBar: {
         position: "fixed",
         top: 0,
@@ -28,16 +29,14 @@ const styles = theme => ({
             width: "100%"
         }
     }
-});
+}));
 
-const AppBar = ({ classes, shifted }) => {
+const AppBar = ({ shifted }) => {
+    const classes = useStyles();
     return (
         <MuiAppBar
             position="absolute"
-            className={classNames(
-                classes.appBar,
-                shifted && classes.appBarShifted
-            )}
+            className={clsx(classes.appBar, shifted && classes.appBarShifted)}
         >
             <AppBarToolbar shifted={shifted} />
         </MuiAppBar>
@@ -45,8 +44,7 @@ const AppBar = ({ classes, shifted }) => {
 };
 
 AppBar.propTypes = {
-    classes: PropTypes.object.isRequired,
     shifted: PropTypes.bool
 };
 
-export default withStyles(styles)(AppBar);
+export default AppBar;

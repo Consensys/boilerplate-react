@@ -1,30 +1,31 @@
 import React from "react";
 import PropTypes from "prop-types";
+// Material Components
+import { Button } from "@material-ui/core";
+// Styles
+import { makeStyles } from "@material-ui/core/styles";
 
-import Button from "@material-ui/core/Button";
-import { grey } from "@material-ui/core/colors";
-import { withStyles } from "@material-ui/core/styles";
-
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
     button: {
-        margin: theme.spacing.unit
+        margin: theme.spacing(1)
     }
-});
+}));
 
-const NoWhereHomeButton = ({ classes, onClick }) => (
-    <Button
-        raised
-        color={grey[500]}
-        className={classes.button}
-        onClick={onClick}
-    >
-        Bring me back home!
-    </Button>
-);
+const NoWhereHomeButton = ({ onClick }) => {
+    const classes = useStyles();
+    return (
+        <Button
+            variant="contained"
+            className={classes.button}
+            onClick={onClick}
+        >
+            Bring me back home!
+        </Button>
+    );
+};
 
 NoWhereHomeButton.propTypes = {
-    classes: PropTypes.object.isRequired,
     onClick: PropTypes.func.isRequired
 };
 
-export default withStyles(styles)(NoWhereHomeButton);
+export default NoWhereHomeButton;

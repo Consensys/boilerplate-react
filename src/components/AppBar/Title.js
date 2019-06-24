@@ -1,12 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-
-import ButtonBase from "@material-ui/core/ButtonBase";
-import Typography from "@material-ui/core/Typography";
+// Material Components
+import { ButtonBase, Typography } from "@material-ui/core";
 
 const AppBarTitle = ({ onClick }) => (
     <ButtonBase onClick={onClick}>
-        <Typography variant="title" color="inherit" noWrap>
+        <Typography variant="h5" color="inherit" noWrap>
             ConsenSys React Boilerplate
         </Typography>
     </ButtonBase>

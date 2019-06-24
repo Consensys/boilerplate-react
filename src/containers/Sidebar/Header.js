@@ -1,11 +1,14 @@
-import { connect } from "react-redux";
-
+import React, { useCallback } from "react";
+import { useDispatch } from "react-redux";
+// Actions
 import { closeSidebar } from "../../redux/actions/ui";
-
+// Components
 import SidebarHeader from "../../components/Sidebar/Header";
 
-const mapDispatchToProps = {
-    onClick: closeSidebar
+const Header = () => {
+    const dispatch = useDispatch();
+    const onClick = useCallback(() => dispatch(closeSidebar()), [dispatch]);
+    return <SidebarHeader onClick={onClick} />;
 };
 
-export default connect(undefined, mapDispatchToProps)(SidebarHeader);
+export default Header;

@@ -1,21 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
+// Material Components
+import { IconButton } from "@material-ui/core";
+// Icons
+import { ChevronLeft as ChevronLeftIcon } from "mdi-material-ui";
+// Styles
+import { makeStyles } from "@material-ui/core/styles";
 
-import { withStyles } from "@material-ui/core/styles";
-import IconButton from "@material-ui/core/IconButton";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
     drawerHeader: {
         display: "flex",
         alignItems: "center",
         justifyContent: "flex-end",
-        padding: "0 " + theme.spacing.unit + "px",
+        padding: theme.spacing(1),
         ...theme.mixins.toolbar
     }
-});
+}));
 
-const SidebarHeader = ({ classes, onClick }) => {
+const SidebarHeader = ({ onClick }) => {
+    const classes = useStyles();
     return (
         <div className={classes.drawerHeader}>
             <IconButton onClick={onClick}>
@@ -26,9 +29,7 @@ const SidebarHeader = ({ classes, onClick }) => {
 };
 
 SidebarHeader.propTypes = {
-    classes: PropTypes.object.isRequired,
-    selected: PropTypes.bool,
     onClick: PropTypes.func.isRequired
 };
 
-export default withStyles(styles)(SidebarHeader);
+export default SidebarHeader;

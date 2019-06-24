@@ -1,11 +1,16 @@
-import { connect } from "react-redux";
+import React, { useCallback } from "react";
+import { useDispatch } from "react-redux";
 import { push } from "connected-react-router";
-
+// Components
 import AppBarTitle from "../../components/AppBar/Title";
+// Constant
 import { HOME } from "../../constants/routes";
 
-const mapDispatchToProps = {
-    onClick: () => push(HOME)
+const Title = () => {
+    const dispatch = useDispatch();
+    const onClick = useCallback(() => dispatch(push(HOME)), [dispatch]);
+
+    return <AppBarTitle onClick={onClick} />;
 };
 
-export default connect(undefined, mapDispatchToProps)(AppBarTitle);
+export default Title;

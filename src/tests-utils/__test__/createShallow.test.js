@@ -1,5 +1,5 @@
 import React from "react";
-import classNames from "classnames";
+import clsx from "clsx";
 
 import { withStyles } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
@@ -8,7 +8,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import createShallow from "../createShallow";
 
 const TestComponent = ({ classes }) => (
-    <IconButton className={classNames(classes.iconButton)}>
+    <IconButton className={clsx(classes.iconButton)}>
         <MenuIcon />
     </IconButton>
 );

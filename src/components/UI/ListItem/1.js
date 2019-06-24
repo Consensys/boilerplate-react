@@ -1,25 +1,29 @@
 import React from "react";
 import PropTypes from "prop-types";
+// Material Components
+import { ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
+// Styles
+import { makeStyles } from "@material-ui/core/styles";
 
-import { withStyles } from "@material-ui/core/styles";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
     iconSelected: {
         color: theme.palette.primary.main
     }
-});
+}));
 
-const ListItem1 = ({ classes, icon, text, onClick, selected, ...props }) => (
-    <ListItem button onClick={onClick} {...props}>
-        <ListItemIcon className={selected ? classes.iconSelected : undefined}>
-            {icon}
-        </ListItemIcon>
-        <ListItemText primary={text} />
-    </ListItem>
-);
+const ListItem1 = ({ icon, text, onClick, selected, ...props }) => {
+    const classes = useStyles();
+    return (
+        <ListItem button onClick={onClick} {...props}>
+            <ListItemIcon
+                className={selected ? classes.iconSelected : undefined}
+            >
+                {icon}
+            </ListItemIcon>
+            <ListItemText primary={text} />
+        </ListItem>
+    );
+};
 
 ListItem1.propTypes = {
     icon: PropTypes.node.isRequired,
@@ -28,4 +32,4 @@ ListItem1.propTypes = {
     onClick: PropTypes.func.isRequired
 };
 
-export default withStyles(styles)(ListItem1);
+export default ListItem1;

@@ -1,18 +1,19 @@
 import React from "react";
-import PropTypes from "prop-types";
-
-import ReportIcon from "@material-ui/icons/Report";
-import { withStyles } from "@material-ui/core/styles";
+// Icons
+import { Alert as ReportIcon } from "mdi-material-ui";
+// Colors
 import { grey } from "@material-ui/core/colors";
-
+// Container
 import NoWhereHomeButton from "../../containers/NoWhere/HomeButton";
+// Styles
+import { makeStyles } from "@material-ui/core/styles";
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
     nowhere: {
         textAlign: "center"
     },
     nowhereHeader: {
-        padding: theme.spacing.unit * 3
+        padding: theme.spacing(3)
     },
     nowhereTitle: {
         fontSize: "1.5em",
@@ -23,22 +24,21 @@ const styles = theme => ({
         width: 80,
         color: grey[500]
     }
-});
+}));
 
-const NoWhere = ({ classes }) => (
-    <div className={classes.nowhere}>
-        <div className={classes.nowhereHeader}>
-            <ReportIcon className={classes.nowhereIcon} />
-            <h1 className={classes.nowhereTitle}>
-                Oups... It seems that you are lost!
-            </h1>
+const NoWhere = () => {
+    const classes = useStyles();
+    return (
+        <div className={classes.nowhere}>
+            <div className={classes.nowhereHeader}>
+                <ReportIcon className={classes.nowhereIcon} />
+                <h1 className={classes.nowhereTitle}>
+                    Oups... It seems that you are lost!
+                </h1>
+            </div>
+            <NoWhereHomeButton />
         </div>
-        <NoWhereHomeButton />
-    </div>
-);
-
-NoWhere.propTypes = {
-    classes: PropTypes.object.isRequired
+    );
 };
 
-export default withStyles(styles)(NoWhere);
+export default NoWhere;

@@ -1,7 +1,8 @@
 import React from "react";
-import { Switch, Route, Redirect } from "react-router";
-
+import { Switch, Route, Redirect } from "react-router-dom";
+// Component
 import LayoutSkeleton from "../../components/Layout/Skeleton";
+// Constants
 import { HOME } from "../../constants/routes";
 
 const Layout = () => (

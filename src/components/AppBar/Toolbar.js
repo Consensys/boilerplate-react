@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+// Material Components
 import Toolbar from "@material-ui/core/Toolbar";
-import withWidth, { isWidthUp } from "@material-ui/core/withWidth";
-
+// Containers
 import AppBarTitle from "../../containers/AppBar/Title";
 import AppBarIconButton from "../../containers/AppBar/IconButton";
+// Styles
+import withWidth, { isWidthUp } from "@material-ui/core/withWidth";
 
 const AppBarToolbar = ({ width, shifted }) => (
     <Toolbar disableGutters={!shifted || isWidthUp("md", width)}>

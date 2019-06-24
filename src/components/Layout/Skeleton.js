@@ -1,13 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
-
-import { withStyles } from "@material-ui/core/styles";
-
+// Containers
 import LayoutContent from "../../containers/Layout/Content";
 import Sidebar from "../../containers/Sidebar/Sidebar";
 import AppBar from "../../containers/AppBar/AppBar";
+// Styles
+import { makeStyles } from "@material-ui/core/styles";
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
     frame: {
         position: "relative",
         display: "flex",
@@ -25,20 +24,19 @@ const styles = theme => ({
             marginTop: 64
         }
     }
-});
+}));
 
-const LayoutSkeleton = ({ classes }) => (
-    <div className={classes.frame}>
-        <AppBar />
-        <Sidebar />
-        <div className={classes.content}>
-            <LayoutContent />
+const LayoutSkeleton = () => {
+    const classes = useStyles();
+    return (
+        <div className={classes.frame}>
+            <AppBar />
+            <Sidebar />
+            <div className={classes.content}>
+                <LayoutContent />
+            </div>
         </div>
-    </div>
-);
-
-LayoutSkeleton.propTypes = {
-    classes: PropTypes.object.isRequired
+    );
 };
 
-export default withStyles(styles)(LayoutSkeleton);
+export default LayoutSkeleton;

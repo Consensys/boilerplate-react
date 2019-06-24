@@ -1,21 +1,19 @@
-import React from "react";
-import { matchPath } from "react-router";
-import { connect } from "react-redux";
+import React, { useCallback } from "react";
+import { useDispatch, useSelector } from "react-redux";
+// Actions
 import { push } from "connected-react-router";
-
+// Component
 import SidebarHomeItem from "../../components/Sidebar/HomeItem";
+// Constants
 import { HOME } from "../../constants/routes";
+// Selectors
+import { selectIsActualRoute } from "../../redux/selectors/router";
 
-const HomeItem = ({ selected, push }) => (
-    <SidebarHomeItem selected={selected} onClick={push} />
-);
-
-const mapStateToProps = state => ({
-    selected: !!matchPath(state.router.location.pathname, { path: HOME })
-});
-
-const mapDispatchToProps = {
-    push: () => push(HOME)
+const HomeItem = () => {
+    const selected = useSelector(selectIsActualRoute(HOME));
+    const dispatch = useDispatch();
+    const onClick = useCallback(() => dispatch(push(HOME)), [dispatch]);
+    return <SidebarHomeItem selected={selected} onClick={onClick} />;
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeItem);
+export default HomeItem;

@@ -1,11 +1,16 @@
-import { connect } from "react-redux";
-import { push } from "react-router-redux";
-
+import React, { useCallback } from "react";
+import { useDispatch } from "react-redux";
+// Actions
+import { push } from "connected-react-router";
+// Component
 import NoWhereHomeButton from "../../components/NoWhere/HomeButton";
+// Constants
 import { HOME } from "../../constants/routes";
 
-const mapDispatchToProps = {
-    onClick: () => push(HOME)
+const HomeButton = () => {
+    const dispatch = useDispatch();
+    const onClick = useCallback(() => dispatch(push(HOME)), [dispatch]);
+    return <NoWhereHomeButton onClick={onClick} />;
 };
 
-export default connect(undefined, mapDispatchToProps)(NoWhereHomeButton);
+export default HomeButton;
