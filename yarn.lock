@@ -1309,13 +1309,6 @@
     react-event-listener "^0.6.6"
     warning "^4.0.1"
 
-"@material-ui/icons@^4.2.1":
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/@material-ui/icons/-/icons-4.2.1.tgz#fe2f1c4f60c24256d244a69d86d0c00e8ed4037e"
-  integrity sha512-FvSD5lUBJ66frI4l4AYAPy2CH14Zs2Dgm0o3oOMr33BdQtOAjCgbdOcvPBeaD1w6OQl31uNW3CKOE8xfPNxvUQ==
-  dependencies:
-    "@babel/runtime" "^7.2.0"
-
 "@material-ui/react-transition-group@^4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@material-ui/react-transition-group/-/react-transition-group-4.2.0.tgz#afec833bbcc79f05a9b4d4828b3e07965cc7e321"
@@ -7211,6 +7204,11 @@ md5.js@^1.3.4:
     hash-base "^3.0.0"
     inherits "^2.0.1"
     safe-buffer "^5.1.2"
+
+mdi-material-ui@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/mdi-material-ui/-/mdi-material-ui-6.1.0.tgz#e380726e5a7d50341dfc5d38683800e6df6c0a49"
+  integrity sha512-sRNB8p+71OlU1HhH7Ao0DT0IPXwVa0YaHBbVT4/DC+Nc9ea91qd1ukx5Vuq6X+0wy+ylmBqbFw8nmlBBb9k6Lg==
 
 mdn-data@~1.1.0:
   version "1.1.4"
