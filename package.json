@@ -19,6 +19,7 @@
 	"dependencies": {
 		"@material-ui/core": "^4.1.2",
 		"@material-ui/icons": "^4.2.1",
+		"clsx": "^1.0.4",
 		"connected-react-router": "^6.4.0",
 		"history": "^4.9.0",
 		"react": "^16.8.6",
@@ -26,7 +27,8 @@
 		"react-redux": "^7.1.0",
 		"react-router-dom": "^5.0.1",
 		"react-scripts": "3.0.1",
-		"redux": "^4.0.1"
+		"redux": "^4.0.1",
+		"reselect": "^4.0.0"
 	},
 	"devDependencies": {
 		"enzyme": "^3.10.0",
